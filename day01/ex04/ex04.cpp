@@ -9,5 +9,5 @@ int main(void)
 	std::string &refer = sub_str;
 
 	std::cout << *point << std::endl;
-	std::cout << *refer << std::endl;
+	std::cout << refer << std::endl;
 }

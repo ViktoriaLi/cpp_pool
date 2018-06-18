@@ -6,7 +6,11 @@
 class Brain
 {
 	public:
-	std::string identify();
-}
+	Brain();
+	~Brain();
+	int size;
+	std::string owner;
+	std::string identify() const;
+};
 
 #endif

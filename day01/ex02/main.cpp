@@ -5,7 +5,7 @@
 int main()
 {
 	std::string name;
-	ZombieEvent *event;
+	ZombieEvent *event = NULL;
 
 	std::cout << "Zombie with chosen name" << std::endl;
 	std::cout << "Enter a zombie name" << std::endl;

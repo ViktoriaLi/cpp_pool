@@ -1,6 +1,6 @@
-NAME = megaphone
+NAME = replace
 
-SFILES = megaphone.cpp
+SFILES = main.cpp
 
 all: $(NAME)
 

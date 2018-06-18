@@ -10,12 +10,12 @@ PhoneBook::PhoneBook()
 
 PhoneBook::~PhoneBook()
 {
-    
+
 }
 
 void PhoneBook::add_contacts()
 {
-	std::cout << "Enter first name" << std::endl;
+	  std::cout << "Enter first name" << std::endl;
     std::cin >> first_name;
     std::cout << "Enter last name" << std::endl;
     std::cin >> last_name;
