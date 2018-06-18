@@ -12,7 +12,7 @@
 
 NAME = phonebook
 
-SFILES = main.cpp
+SFILES = main.cpp PhoneBook.cpp
 
 all: $(NAME)
 
