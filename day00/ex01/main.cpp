@@ -1,3 +1,15 @@
+// ************************************************************************** //
+//                                                                            //
+//                                                        :::      ::::::::   //
+//   main.cpp                                           :+:      :+:    :+:   //
+//                                                    +:+ +:+         +:+     //
+//   By: vlikhotk <marvin@42.fr>                    +#+  +:+       +#+        //
+//                                                +#+#+#+#+#+   +#+           //
+//   Created: 2018/06/19 13:20:05 by vlikhotk          #+#    #+#             //
+//   Updated: 2018/06/19 13:20:07 by vlikhotk         ###   ########.fr       //
+//                                                                            //
+// ************************************************************************** //
+
 # include <iostream>
 # include <string>
 # include <iomanip>
@@ -20,7 +32,7 @@ void print_phonebook(int counter, PhoneBook *contacts)
   std::cout << std::setw (10);
   std::cout << "nickname" << std::endl;
   while (i < counter)
-  { 
+  {
     std::cout << std::setw (10);
     std::cout << i;
     std::cout << '|';
@@ -41,11 +53,13 @@ int main(void)
   {
     std::cout << "Enter ADD, SEARCH or EXIT command to create, use or exit your Phonebook" << std::endl;
     std::cin >> user_command;
+    if (std::cin.fail())
+			exit (0);
     if (user_command != "ADD" && user_command != "SEARCH" && user_command != "EXIT")
     {
       std::cout << "Incorrect command, try again!" << std::endl;
       continue ;
-    }   
+    }
     if (user_command == "ADD" && counter < 8)
     {
       contacts[counter].add_contacts();
@@ -56,6 +70,8 @@ int main(void)
       print_phonebook(counter, contacts);
       std::cout << "Chose the number of contact to see more detailed info" << std::endl;
       std::cin >> index;
+      if (std::cin.fail())
+  			exit (0);
       if (index[0] >= 48 && index[0] < counter + 48)
         contacts[index[0] - 48].print_one_contact();
       else

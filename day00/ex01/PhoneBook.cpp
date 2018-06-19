@@ -1,3 +1,15 @@
+// ************************************************************************** //
+//                                                                            //
+//                                                        :::      ::::::::   //
+//   PhoneBook.cpp                                      :+:      :+:    :+:   //
+//                                                    +:+ +:+         +:+     //
+//   By: vlikhotk <marvin@42.fr>                    +#+  +:+       +#+        //
+//                                                +#+#+#+#+#+   +#+           //
+//   Created: 2018/06/19 13:19:45 by vlikhotk          #+#    #+#             //
+//   Updated: 2018/06/19 13:19:48 by vlikhotk         ###   ########.fr       //
+//                                                                            //
+// ************************************************************************** //
+
 # include <iostream>
 # include <string>
 # include <iomanip>
@@ -17,26 +29,59 @@ void PhoneBook::add_contacts()
 {
 	  std::cout << "Enter first name" << std::endl;
     std::cin >> first_name;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter last name" << std::endl;
     std::cin >> last_name;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter nickname" << std::endl;
     std::cin >> nickname;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter login" << std::endl;
     std::cin >> login;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter postal address" << std::endl;
     std::cin >> postal_address;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter email address" << std::endl;
     std::cin >> email_address;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter phone number" << std::endl;
     std::cin >> phone_number;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter birthday date" << std::endl;
     std::cin >> birthday_date;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter favorite meal" << std::endl;
     std::cin >> favorite_meal;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter underwear color" << std::endl;
     std::cin >> underwear_color;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
     std::cout << "Enter darkest secret" << std::endl;
     std::cin >> darkest_secret;
+		if (std::cin.fail())
+			exit (0);
+		std::cin.ignore(100, '\n');
 }
 
 void PhoneBook::show_contacts()
