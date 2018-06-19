@@ -10,7 +10,7 @@ $(NAME): $(OFILES)
 	clang++ $(OFILES) -o $(NAME)
 
 $(OFILES):%.o:%.cpp
-	clang++ -Wall -Wextra -Werror -c $(SFILES)
+	clang++ -std=c++98 -Wall -Wextra -Werror -c $(SFILES)
 
 clean:
 	rm -f $(OFILES)

@@ -29,6 +29,8 @@ void ZombieEvent::setZombieType(Zombie *new_zombie)
 {
 	std::cout << "Enter a zombie type" << std::endl;
 	std::cin >> new_zombie->type;
+	if (std::cin.fail())
+		exit (0);
 }
 
 Zombie* ZombieEvent::newZombie(std::string name)

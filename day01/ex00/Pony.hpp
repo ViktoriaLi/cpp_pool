@@ -17,15 +17,11 @@
 
 class Pony {
   public:
-    Pony(std::string username);
+    Pony(std::string username, int userage, std::string usercountry);
     ~Pony();
     std::string name;
-    std::string age;
-    std::string color;
-    std::string type;
+    int age;
     std::string country;
-    void ponyOnTheHeap();
-    void ponyOnTheStack();
 };
 
 #endif

@@ -13,22 +13,13 @@
 #include <iostream>
 #include "Pony.hpp"
 
-Pony::Pony(std::string username)
+Pony::Pony(std::string username, int userage, std::string usercountry) : name(username),
+age(userage), country(usercountry)
 {
-	name = username;
+	std::cout << this->name << " Pony created!" << std::endl;
 }
 
 Pony::~Pony()
 {
-
-}
-
-void Pony::ponyOnTheStack()
-{
-   std::cout << "Hello! I am " << name << " pony!" << std::endl;
-}
-
-void Pony::ponyOnTheHeap()
-{
-   std::cout << "Hello! I am " << name << " pony!" << std::endl;
+	std::cout << this->name << " Pony deleted!" << std::endl;
 }

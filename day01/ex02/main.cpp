@@ -22,6 +22,8 @@ int main()
 	std::cout << "Zombie with chosen name" << std::endl;
 	std::cout << "Enter a zombie name" << std::endl;
 	std::cin >> name;
+	if (std::cin.fail())
+		exit (0);
 	Zombie *first = event->newZombie(name);
 	first->announce();
 	delete first;

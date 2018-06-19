@@ -17,11 +17,16 @@
 int main(void)
 {
 	int i = 0;
-	int n;
+	std::string n;
 
 	std::cout << "Enter a number of Zombies" << std::endl;
 	std::cin >> n;
-	ZombieHorde new_one(n);
-	while (i < n)
-		new_one.all[i++].announce();
+	if (std::cin.fail())
+		exit (0);
+	if (n[0] >= 48 && n[0] <= 57)
+	{
+		ZombieHorde new_one((int)n);
+		while (i < n)
+			new_one.all[i++].announce();
+	}
 }
