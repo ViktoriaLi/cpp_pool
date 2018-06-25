@@ -19,7 +19,7 @@
 class HumanA
 {
   public:
-    HumanA(std::string user_name, Weapon weap1);
+    HumanA(std::string user_name, Weapon &weap1);
     ~HumanA();
     std::string name;
     Weapon *weap;

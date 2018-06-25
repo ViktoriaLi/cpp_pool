@@ -17,6 +17,7 @@
 
 ZombieHorde::ZombieHorde(int N)
 {
+	std::cout << "ZombieHorde Constructor called" << std::endl;
 	int i = 0;
 
 	ZombieHorde::all = new Zombie[N];
@@ -31,6 +32,7 @@ ZombieHorde::ZombieHorde(int N)
 
 ZombieHorde::~ZombieHorde()
 {
+	std::cout << "ZombieHorde Destructor called" << std::endl;
 	delete [] all;
 }
 

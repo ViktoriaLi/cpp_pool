@@ -23,7 +23,7 @@ class HumanB
     ~HumanB();
     std::string name;
     Weapon *weap;
-    void setWeapon(Weapon us_weap);
+    void setWeapon(Weapon &us_weap);
     void attack();
 };
 

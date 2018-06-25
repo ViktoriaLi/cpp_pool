@@ -17,16 +17,27 @@
 int main(void)
 {
 	int i = 0;
-	std::string n;
+	int N = 0;
+	char n[256];
 
 	std::cout << "Enter a number of Zombies" << std::endl;
 	std::cin >> n;
 	if (std::cin.fail())
 		exit (0);
-	if (n[0] >= 48 && n[0] <= 57)
+	if (isdigit(n[0]))
 	{
-		ZombieHorde new_one((int)n);
-		while (i < n)
+		N = atoi((const char *)n);
+		ZombieHorde new_one(N);
+		while (i < N)
 			new_one.all[i++].announce();
 	}
+	else
+	{
+		N = 1 + rand() % 20;
+		std::cout << "Random number of Zombie is: " << N << std::endl;
+		ZombieHorde new_one(N);
+		while (i < N)
+			new_one.all[i++].announce();
+	}
+	return (0);
 }

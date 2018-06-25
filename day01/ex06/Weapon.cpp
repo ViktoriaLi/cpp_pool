@@ -13,25 +13,23 @@
 #include <iostream>
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string usname)
+Weapon::Weapon(std::string usname) : type(usname)
 {
-  setType(usname);
+  std::cout << "Weapon Constructor called" << std::endl;
 }
 
 Weapon::~Weapon()
 {
-
+  std::cout << "Weapon Destructor called" << std::endl;
 }
 
 const std::string &Weapon::getType()
 {
-  const std::string &refer = type;
-  return (refer);
+  return (type);
 }
 
 
 void Weapon::setType(std::string usname)
 {
   type = usname;
-  
 }

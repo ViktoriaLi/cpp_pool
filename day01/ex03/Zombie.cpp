@@ -15,12 +15,12 @@
 
 Zombie::Zombie()
 {
-
+	std::cout << "Zombie Constructor called" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-
+	std::cout << "Zombie Destructor called" << std::endl;
 }
 
 void Zombie::announce()

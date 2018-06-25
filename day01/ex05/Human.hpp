@@ -19,10 +19,11 @@
 class Human
 {
 	public:
-	Human();
-	~Human();
-	const Brain br_elem;
-	std::string identify();
+		Human();
+		~Human();
+		const Brain br_elem;
+		std::string identify();
+		Brain const &getBrain();
 };
 
 #endif

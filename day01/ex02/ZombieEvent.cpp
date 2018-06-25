@@ -17,12 +17,12 @@
 
 ZombieEvent::ZombieEvent()
 {
-
+	std::cout << "ZombieEvent Constructor called" << std::endl;
 }
 
 ZombieEvent::~ZombieEvent()
 {
-
+	std::cout << "ZombieEvent Destructor called" << std::endl;
 }
 
 void ZombieEvent::setZombieType(Zombie *new_zombie)

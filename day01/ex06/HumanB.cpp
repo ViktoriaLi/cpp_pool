@@ -15,20 +15,21 @@
 
 HumanB::HumanB(std::string user_name)
 {
+  std::cout << "HumanB Constructor called" << std::endl;
   name = user_name;
 }
 
 HumanB::~HumanB()
 {
-
+  std::cout << "HumanB Destructor called" << std::endl;
 }
 
 void HumanB::attack()
 {
-  std::cout << name << " attacks with his " << weap->type << std::endl;
+  std::cout << name << " attacks with his " << weap->getType() << std::endl;
 }
 
-void HumanB::setWeapon(Weapon us_weap)
+void HumanB::setWeapon(Weapon &us_weap)
 {
   weap = &us_weap;;
 }

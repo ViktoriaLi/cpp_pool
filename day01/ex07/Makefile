@@ -2,12 +2,20 @@ NAME = replace
 
 SFILES = main.cpp
 
+OFILES = main.o
+
 all: $(NAME)
 
-$(NAME):
-	clang++ -Wall -Wextra -Werror $(SFILES) -o $(NAME)
+$(NAME): $(OFILES)
+	clang++ $(OFILES) -o $(NAME)
 
-fclean:
+$(OFILES):%.o:%.cpp
+	clang++ -Wall -Wextra -Werror -c $(SFILES) -o $(OFILES)
+
+clean:
+	rm -f $(OFILES) *.replace
+
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

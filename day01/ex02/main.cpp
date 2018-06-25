@@ -31,4 +31,5 @@ int main()
 	Zombie *second = event->randomChump();
 	second->announce();
 	delete second;
+	return (0);
 }

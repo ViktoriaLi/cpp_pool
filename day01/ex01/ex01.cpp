@@ -22,5 +22,5 @@ void memoryLeak()
 /*int main(void)
 {
 	memoryLeak();
-	return 0;
+	return (0);
 }*/
