@@ -1,17 +1,18 @@
 #include <iostream>
+#include <vector>
 
 template <typename T>
-void easyfind(T , int)
+int easyfind(T arr, int a)
 {
+  std::vector<int>::const_iterator it = arr.begin();
+  std::vector<int>::const_iterator ite = arr.end();
   int i = 0;
-  while (i < len)
+  while (it != ite)
   {
-    (*f)(array[i++]);
+    if (*it == a)
+      return i;
+    i++;
+    it++;
   }
-}
-
-template <typename Num>
-void intTest(Num elem)
-{
-  std::cout << elem << std::endl;
+  return -1;
 }
